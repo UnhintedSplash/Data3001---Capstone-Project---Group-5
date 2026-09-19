@@ -2,3 +2,4 @@
 Contributing members:
 - Kaleb Irawan
 - Kangzhe Sun
+- Ivy Zeng
