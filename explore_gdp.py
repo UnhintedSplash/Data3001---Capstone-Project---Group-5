@@ -1,7 +1,7 @@
 from clouddrift.datasets import gdp1h
 from clouddrift.ragged import subset
 
-# 连接 GDP 数据
+# Connect to the GDP dataset
 ds = gdp1h()
 
 print("Original dataset:")

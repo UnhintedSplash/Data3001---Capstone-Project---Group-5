@@ -4,13 +4,13 @@ from clouddrift.plotting import plot_ragged
 import matplotlib.pyplot as plt
 import numpy as np
 
-# 连接 GDP hourly dataset
+# Connect to the GDP hourly dataset
 ds = gdp1h()
 
-# 选择前 10 个 drifter ID
+# Select the first 10 drifter IDs
 ids = ds.id[:10].values
 
-# 提取这 10 条完整轨迹
+# Extract the complete trajectories for these 10 drifters
 small_ds = subset(
     ds,
     {"id": ids},
@@ -20,10 +20,10 @@ small_ds = subset(
 print("Number of trajectories:", small_ds.sizes["traj"])
 print("Number of observations:", small_ds.sizes["obs"])
 
-# 创建图片
+# Create the figure
 fig, ax = plt.subplots(figsize=(10, 6))
 
-# 绘制轨迹
+# Plot the trajectories
 plot_ragged(
     ax,
     small_ds.lon,
